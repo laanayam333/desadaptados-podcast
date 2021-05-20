@@ -1,0 +1,40 @@
+{
+  "name": "desadaptados-podcast",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next --port $PORT\" \"cd studio && sanity start\"",
+    "build": "echo 'Building Sanity to public/studio' && cd studio && sanity build ../public/studio -y && cd .. && next build",
+    "start": "vercel dev",
+    "postinstall": "lerna bootstrap"
+  },
+  "keywords": [],
+  "author": "Luis Anaya <brothersailorwebdev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@heroicons/react": "^1.0.1",
+    "@sanity/block-content-to-react": "2.0.7",
+    "@sanity/cli": "^2.0.5",
+    "@sanity/client": "2.8.0",
+    "@sanity/image-url": "0.140.22",
+    "@tailwindcss/forms": "^0.3.2",
+    "axios": "^0.21.1",
+    "classnames": "2.3.1",
+    "date-fns": "2.21.1",
+    "next": "latest",
+    "next-sanity": "^0.1.12",
+    "react": "^17.0.2",
+    "react-audio-player": "^0.17.0",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.1.1",
+    "swr": "^0.5.5"
+  },
+  "devDependencies": {
+    "@sanity/cli": "^2.8.0",
+    "autoprefixer": "^10.2.5",
+    "concurrently": "^5.3.0",
+    "lerna": "^4.0.0",
+    "postcss": "^8.2.14",
+    "tailwindcss": "^2.1.2"
+  }
+}
