@@ -45,7 +45,7 @@ const EpisodeHero = ({ episode }) => {
 
       <div className="w-full lg:w-2/4 order-first lg:order-none">
         {episode.coverImage && (
-          <div className="relative w-full h-96 border-b-2 border-dark">
+          <div className="relative w-full h-96 border-b-2 lg:border-b-0 border-dark">
             <Image
               src={episode.coverImage}
               alt="asdasd"
